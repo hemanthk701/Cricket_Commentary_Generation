@@ -42,7 +42,8 @@ scaling_factorx = 0.900
 scaling_factory = 0.9
 image_placeholder = st.empty()
 currentframe = 1
-target = 'C:/Users/User/Desktop/All_codes/Stremlit/frames'
+#Enter a directory for the frames to get stored in
+target = #'C:/frames'
 dr = similarity.DuplicateRemover(target)
 list1 = os.listdir(target)
 try:
@@ -55,7 +56,7 @@ except:
 
 def model1(file_name,path):
     # load the tokenizer
-    tokenizer = model_final.load(open('C:/Users/User/Desktop/All_codes/Stremlit/Model/tokenizer1 (1).pkl', 'rb'))
+    tokenizer = model_final.load(open('tokenizer1.pkl', 'rb'))
     # pre-define the max sequence length (from training)
     max_length = 25
     # load the model
@@ -77,7 +78,8 @@ def model1(file_name,path):
 
 
 def audio(b,name2):
-    target = "C:/Users/User/Desktop/All_codes/Stremlit/Audio/"
+    #Enter a directory for audio created for the comments generated to get stored
+    target = #"C:Audio/"
     language = 'en'
     myobj = gTTS(text=name2, lang=language, slow=False) 
     myobj.save(target + b + ".mp3")
@@ -119,7 +121,8 @@ if temporary_location:
                 name1 = currentframe
                 # writing the extracted images 
                 cv2.imwrite(name, image) 
-                grey_scale(name,'C:/Users/User/Desktop/All_codes/Stremlit/Delete')
+                #Enter path for the greyscale image of frames to be stored
+                grey_scale(name,'C:/Grey_scale')
 
                 # increasing counter so that it will 
                 # show how many frames are created 
@@ -157,7 +160,7 @@ if temporary_location:
                     if image_checkpoint < 41:
                         if image_checkpoint%5 == 0:
                         # or image_checkpoint == 1:
-                            grey_scale(path1,'C:/Users/User/Desktop/All_codes/Stremlit/Delete')
+                            grey_scale(path1,'C:/Grey_scale')
                     #break
         else:
             print("there was a problem or video was finished")
