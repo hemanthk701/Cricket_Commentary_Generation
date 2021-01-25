@@ -16,6 +16,6 @@ User-Interface Three python files namely UI_final.py, model_final.py and similar
 
 Project Presentation - https://www.slideshare.net/GokulSuseendran/automated-cricket-commentary
 
-*UI Output**
+*UI Output*
 
 ![at text](UI_result2.png)
