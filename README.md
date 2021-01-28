@@ -12,6 +12,8 @@ In this folder there is Data folder and Modelling Jupyter file. In Data folder t
 
 The model used is a basic merge model. This model uses VGG16 pre-trained model for the feature extraction from the frames and used RNN-LSTM to process the sequence of the text input. The outputs of these two models are taken as the inputs for the decoder or the merger where the inputs are merged and are processed by the dense layer for the final prediction. A few dropout layers have been implementd to reduce overfitting. 
 
+![at text](Schematic-of-the-Merge-Model-For-Image-Captioning.png)
+
 
 User-Interface 
 
